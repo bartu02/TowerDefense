@@ -198,15 +198,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215071844755301551}
-  m_LocalRotation: {x: -0.49991274, y: -0.50008726, z: -0.49991274, w: 0.50008726}
-  m_LocalPosition: {x: 0, y: 1.3974535, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00014165044, y: 1.397778, z: 0.0057218084}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 3093805154645936752}
   - {fileID: 1671159701872244687}
   m_Father: {fileID: 4851640249650234084}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -89.98, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958536003767295557
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958536003767295557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.017, z: 0.005}
+  m_LocalPosition: {x: -0.00002, y: 0.00482, z: 0.0122}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4846969379934916590}
@@ -5092,6 +5092,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2949165499443261350, guid: 021c6be11d088984f838b79fbf87f31d, type: 3}
   fireRate: 1
   useLaser: 1
+  damageOverTime: 30
+  slowAmount: 0.5
   lineRenderer: {fileID: 1235618376586065296}
   impactEffect: {fileID: 7202050515208969479}
   impactLight: {fileID: 1832899059}
@@ -5222,13 +5224,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5326105174443820873}
-  m_LocalRotation: {x: -0.00012344122, y: 0.00012332201, z: 0.70710677, w: 0.70710677}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4846969379934916590}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 180, z: -90}
 --- !u!33 &7235186322019053655
 MeshFilter:
   m_ObjectHideFlags: 0
