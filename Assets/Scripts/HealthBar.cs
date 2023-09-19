@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Image healthBarImage; // Reference to the Image component
-    public Enemy currentEnemy; // Reference to the Enemy script
+    public Enemy currentEnemy; // Reference to the Enemy prefab
     public float maxHealth = 100; // Maximum health value
 
     private void Start()

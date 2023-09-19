@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 705619351}
-  maxHealth: 100
   currentEnemy: {fileID: 2327919172804840941}
+  maxHealth: 100
 --- !u!1 &1384306610
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 2327919172804840941}
   - component: {fileID: 8783410393076064327}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Simple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 165a6463c341ce346b9549f5ece4df51, type: 2}
+  - {fileID: 2100000, guid: 36ad779d225bee54b9f56abe680ce5db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

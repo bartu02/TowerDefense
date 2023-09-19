@@ -51,6 +51,11 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1f / wave.rate);
         }    
         waveIndex++;
+        if(waveIndex == waves.Length)
+        {
+            Debug.Log("Level Won!");
+            this.enabled = false;
+        }
     }
     void SpawnEnemy(GameObject enemy)
     {

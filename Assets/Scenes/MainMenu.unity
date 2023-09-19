@@ -1532,7 +1532,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336401081876499058}
-  - component: {fileID: 9189346307408366560}
   - component: {fileID: 1144182229471989961}
   m_Layer: 0
   m_Name: StandartTurret
@@ -1665,28 +1664,3 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &9189346307408366560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144182229471989960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613bea71c77e4ee4f8bbd95da8637e08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 30
-  bulletPrefab: {fileID: 2949165499443261350, guid: 021c6be11d088984f838b79fbf87f31d, type: 3}
-  fireRate: 0.5
-  useLaser: 0
-  damageOverTime: 30
-  slowAmount: 0.5
-  lineRenderer: {fileID: 0}
-  impactEffect: {fileID: 0}
-  impactLight: {fileID: 0}
-  enemyTag: Enemy
-  partToRotate: {fileID: 225631318129564267}
-  turnSpeed: 10
-  firePoint: {fileID: 0}

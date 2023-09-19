@@ -13105,21 +13105,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
+  - enemy: {fileID: 1263333764943292626, guid: 387765d433688c046aec0b7106fd76b5, type: 3}
+    count: 1
+    rate: 2
+  - enemy: {fileID: 1263333764943292626, guid: 387765d433688c046aec0b7106fd76b5, type: 3}
+    count: 2
+    rate: 2
+  - enemy: {fileID: 1263333764943292626, guid: 387765d433688c046aec0b7106fd76b5, type: 3}
+    count: 5
+    rate: 2
+  - enemy: {fileID: 1263333764943292626, guid: f8ab25bd75182104486ade46a5cbf17f, type: 3}
+    count: 3
+    rate: 1
+  - enemy: {fileID: 1263333764943292626, guid: a8106e4318d7a1d47a2fcde89b1439c7, type: 3}
+    count: 10
+    rate: 3
   spawnPoint: {fileID: 808447657}
   timeBetweenWaves: 5
   waveCountdownText: {fileID: 390801700}
