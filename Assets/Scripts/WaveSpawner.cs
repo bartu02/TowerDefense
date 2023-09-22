@@ -18,6 +18,8 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
+    public GameManager gameManager;
+
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -44,22 +46,29 @@ public class WaveSpawner : MonoBehaviour
     {
         PlayerStats.Rounds++;
 
-        Wave wave = waves[waveIndex];
-        for (int i = 0; i < wave.count; i++)
-        {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1f / wave.rate);
-        }    
         waveIndex++;
-        if(waveIndex == waves.Length)
+        if (waveIndex < waves.Length)
         {
-            Debug.Log("Level Won!");
+            // Access the wave and spawn enemies if it's within the array bounds
+            Wave wave = waves[waveIndex];
+
+            EnemiesAlive = wave.count;
+            for (int i = 0; i < wave.count; i++)
+            {
+                SpawnEnemy(wave.enemy);
+                yield return new WaitForSeconds(1f / wave.rate);
+            }
+        }
+        else
+        {
+            // No more waves, you've won the level or completed all waves
+            gameManager.WinLevel();
             this.enabled = false;
         }
+
     }
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-        EnemiesAlive++;
     }
 }

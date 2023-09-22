@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 61063eb0567522446b15e161f2201a6c, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 41b0a5a4721826a41ae0158fc8c8d20c, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -13123,6 +13123,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 808447657}
   timeBetweenWaves: 5
   waveCountdownText: {fileID: 390801700}
+  gameManager: {fileID: 0}
 --- !u!114 &1166313366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13165,6 +13166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1493551478}
+  sceneFader: {fileID: 0}
 --- !u!114 &1166313369
 MonoBehaviour:
   m_ObjectHideFlags: 0

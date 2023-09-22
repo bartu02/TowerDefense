@@ -7,15 +7,15 @@ using TMPro;
 public class Buttons : MonoBehaviour
 {
     public GameObject buttonPrefab;
-
-    private const int levelCount = 300;
-
+    
     public LevelSelector levelSelector;
-    private void Start()
+
+    private void Awake()
     {
+        int levelCount = levelSelector.levelCount;
         for (int i = 0; i < levelCount; i++)
         {
-           
+            
             int levelIndex = i+1; 
 
             GameObject button = Instantiate(buttonPrefab, transform);
@@ -24,6 +24,10 @@ public class Buttons : MonoBehaviour
             Button buttonComponent = button.GetComponent<Button>();
 
             buttonComponent.onClick.AddListener(() => levelSelector.Select("Level" + levelIndex.ToString()));
+
+            levelSelector.SetButtons(button);
+
+           
         }
 
     }

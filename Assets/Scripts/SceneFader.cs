@@ -43,4 +43,9 @@ public class SceneFader : MonoBehaviour
         }
         SceneManager.LoadScene(scene);
     }
+
+    public string GetSceneName()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 }
