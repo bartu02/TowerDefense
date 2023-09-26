@@ -11,7 +11,9 @@ public class LevelSelector : MonoBehaviour
 
     List<GameObject> levelButtons = new List<GameObject>();
 
-    public readonly int levelCount = 2;
+    public static readonly int levelCount = 2;
+
+    
 
     private void Start()
     {
@@ -38,3 +40,4 @@ public class LevelSelector : MonoBehaviour
         levelButtons.Add(btn);
     }
 }
+

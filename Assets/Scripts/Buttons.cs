@@ -9,10 +9,11 @@ public class Buttons : MonoBehaviour
     public GameObject buttonPrefab;
     
     public LevelSelector levelSelector;
+        
 
     private void Awake()
     {
-        int levelCount = levelSelector.levelCount;
+        int levelCount = LevelSelector.levelCount;
         for (int i = 0; i < levelCount; i++)
         {
             

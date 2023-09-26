@@ -225,8 +225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 123.900024, y: -121.94}
-  m_SizeDelta: {x: 212.3284, y: 72.811}
+  m_AnchoredPosition: {x: 3.4878, y: -223}
+  m_SizeDelta: {x: 159.1885, y: 72.811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4661404
 MonoBehaviour:
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1511452358}
+      - m_Target: {fileID: 1493551480}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4661402}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -4668,15 +4668,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7244b3abf84dd3143bfe8cf261c38cd2, type: 2}
+  m_sharedMaterial: {fileID: 3877683442210289976, guid: 7244b3abf84dd3143bfe8cf261c38cd2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5668,7 +5668,7 @@ GameObject:
   - component: {fileID: 531436851}
   - component: {fileID: 531436850}
   m_Layer: 5
-  m_Name: RetryButton
+  m_Name: ContinueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5691,8 +5691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -135.62138, y: -121.93576}
-  m_SizeDelta: {x: 198.057, y: 72.8142}
+  m_AnchoredPosition: {x: 3.4878, y: -130}
+  m_SizeDelta: {x: 376.3828, y: 72.8142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531436850
 MonoBehaviour:
@@ -5738,9 +5738,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1511452358}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
-        m_MethodName: Retry
+      - m_Target: {fileID: 1166313368}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: WinLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13754,7 +13754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1493551478}
-  sceneFader: {fileID: 3576624587283618330}
+  completeLevelUI: {fileID: 1511452356}
 --- !u!114 &1166313369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14270,7 +14270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RETRY
+  m_text: CONTINUE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16625,7 +16625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1493551479
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16739,13 +16739,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1511452357}
   - component: {fileID: 1511452358}
+  - component: {fileID: 1511452359}
   m_Layer: 5
   m_Name: LevelCompleted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1511452357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16783,6 +16784,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundsText: {fileID: 1658399535}
+--- !u!114 &1511452359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511452356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8f0b2b68a3be84c96d6d6766c808b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuSceneName: MainMenu
+  sceneFader: {fileID: 3576624587283618330}
 --- !u!1001 &1517174476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21614,6 +21629,7 @@ GameObject:
   - component: {fileID: 1934739064}
   - component: {fileID: 1934739063}
   - component: {fileID: 1934739062}
+  - component: {fileID: 1934739065}
   m_Layer: 5
   m_Name: Rounds
   m_TagString: Untagged
@@ -21752,6 +21768,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934739060}
   m_CullTransparentMesh: 1
+--- !u!114 &1934739065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934739060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c0cc366850f7940ba79046df2e5878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roundsText: {fileID: 1934739063}
 --- !u!1001 &1949554812
 PrefabInstance:
   m_ObjectHideFlags: 0
