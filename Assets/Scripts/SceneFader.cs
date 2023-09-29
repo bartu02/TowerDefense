@@ -45,8 +45,27 @@ public class SceneFader : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-    public string GetSceneName()
+    public static string GetSceneName()
     {
         return SceneManager.GetActiveScene().name;
+    }
+
+    public static int LevelToInt()
+    {
+        string currentSceneName = GetSceneName();
+        string prefixToRemove = "Level";
+
+        string StringTypeLevel = currentSceneName.Substring(prefixToRemove.Length);
+
+        return int.Parse(StringTypeLevel);
+
+    }
+    public string NextLevelToString(int IntTypeLevel)
+    {
+        string prefixToRemove = "Level";
+        string nextLevel = prefixToRemove + (IntTypeLevel + 1).ToString();
+
+        return nextLevel;
+
     }
 }

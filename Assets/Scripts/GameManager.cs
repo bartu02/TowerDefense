@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
+
+    public TextMeshProUGUI roundsText;
     private void Start()
     {
         GameIsOver = false;
@@ -33,7 +36,9 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         GameIsOver = true;
+        StartCoroutine(AnimateText());
         gameOverUI.SetActive(true);
+        Time.timeScale = 0;
 
     }
 
@@ -42,5 +47,21 @@ public class GameManager : MonoBehaviour
         GameIsOver = true;
         completeLevelUI.SetActive(true);
         
+    }
+    IEnumerator AnimateText()
+    {
+        roundsText.text = "0";
+        int round = 0;
+
+        yield return new WaitForSeconds(0.7f);
+
+        while (round < PlayerStats.Rounds - 1)
+        {
+            round++;
+            roundsText.text = round.ToString();
+
+            yield return new WaitForSeconds(0.05f);
+        }
+
     }
 }

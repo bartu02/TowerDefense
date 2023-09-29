@@ -377,11 +377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0ec37883f32f745bd5bb9f909ccdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 10
+  startSpeed: 15
   speed: 10
-  startHealth: 100
+  startHealth: 400
   health: 100
-  worth: 50
+  worth: 70
   deathEffect: {fileID: 704383221102319306, guid: b1bea657143e95c4a8d24a875a64f9f7, type: 3}
 --- !u!114 &8783410393076064327
 MonoBehaviour:

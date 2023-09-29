@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
 
     public float startHealth = 100;
-    [HideInInspector]
+    
     public float health;
     public int worth = 50;
 
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         speed = startSpeed;
-        health = startHealth;
+        health = startHealth*((float)(7+SceneFader.LevelToInt())/8);
     }
     public void TakeDamage (float amount)
     {

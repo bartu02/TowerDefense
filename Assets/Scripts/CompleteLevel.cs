@@ -11,11 +11,8 @@ public class CompleteLevel : MonoBehaviour
 
     public void Continue()
     {
-        string currentSceneName = sceneFader.GetSceneName();
-        string prefixToRemove = "Level";
 
-        string StringTypeLevel = currentSceneName.Substring(prefixToRemove.Length);
-        int IntTypeLevel = int.Parse(StringTypeLevel);
+        int IntTypeLevel = SceneFader.LevelToInt();
 
         if (PlayerPrefs.GetInt("levelReached", 1) == IntTypeLevel)
         {
@@ -28,7 +25,7 @@ public class CompleteLevel : MonoBehaviour
             Debug.Log("This was the last scene.");
             return;
         }
-        string nextLevel = prefixToRemove + (IntTypeLevel + 1).ToString();
+        string nextLevel = sceneFader.NextLevelToString(IntTypeLevel);
 
         sceneFader.FadeTo(nextLevel);
     }

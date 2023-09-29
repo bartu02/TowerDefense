@@ -13,8 +13,15 @@ public class WaveSpawner : MonoBehaviour
 
     public float timeBetweenWaves = 5f;
     private float countdown = 2f;
+    private int minCount = 5;
+    private int maxCount = 12;
+
+    private int minRate = 3;
+    private int maxRate = 8;
 
     public TextMeshProUGUI waveCountdownText;
+    public TextMeshProUGUI WaveNumberText;
+    public TextMeshProUGUI LevelNumberText;
 
     private int waveIndex = 0;
 
@@ -23,9 +30,14 @@ public class WaveSpawner : MonoBehaviour
     // Start is called before the first frame update
 
     // Update is called once per frame
+    private void Start()
+    {
+        WaveNumberText.text = "Wave:1";
+        LevelNumberText.text = "Level: " + SceneFader.LevelToInt();
+    }
     void Update()
     {
-        if(EnemiesAlive >0)
+        if(EnemiesAlive > 0)
         {
             return;
         }
@@ -47,17 +59,29 @@ public class WaveSpawner : MonoBehaviour
         PlayerStats.Rounds++;
 
         waveIndex++;
-        if (waveIndex < waves.Length)
+        if (waveIndex < 3 + (SceneFader.LevelToInt()-1)*2)
         {
-            // Access the wave and spawn enemies if it's within the array bounds
-            Wave wave = waves[waveIndex];
+            WaveNumberText.text = "Wave: " + waveIndex;
+            LevelNumberText.text = "Level: " + SceneFader.LevelToInt();
 
-            EnemiesAlive = wave.count;
-            for (int i = 0; i < wave.count; i++)
+            // Randomly select count and rate values
+            int randomCount = Random.Range(minCount, maxCount + 1);
+            float randomRate = Random.Range(minRate, maxRate);
+
+            EnemiesAlive = randomCount;
+            for (int i = 0; i < randomCount; i++)
             {
-                SpawnEnemy(wave.enemy);
-                yield return new WaitForSeconds(1f / wave.rate);
+                // Randomly select an enemy prefab from the wave's array
+                int randomEnemyPrefabIndex = Random.Range(0, waves.Length);
+                GameObject randomEnemyPrefab = waves[randomEnemyPrefabIndex].enemy;
+
+                // Instantiate an enemy of the selected prefab
+                GameObject spawnedEnemy = Instantiate(randomEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
+
+                yield return new WaitForSeconds(1f / randomRate);
             }
+
         }
         else
         {
@@ -65,7 +89,6 @@ public class WaveSpawner : MonoBehaviour
             gameManager.WinLevel();
             this.enabled = false;
         }
-
     }
     void SpawnEnemy(GameObject enemy)
     {
