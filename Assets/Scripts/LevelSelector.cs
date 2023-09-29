@@ -11,7 +11,7 @@ public class LevelSelector : MonoBehaviour
 
     List<GameObject> levelButtons = new List<GameObject>();
 
-    public static readonly int levelCount = 10;
+    public static readonly int levelCount = 16;
 
     
 

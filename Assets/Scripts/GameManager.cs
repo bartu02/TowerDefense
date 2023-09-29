@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         GameIsOver = true;
         StartCoroutine(AnimateText());
         gameOverUI.SetActive(true);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;     When pressing retry button after losing the level, it doesn't load the level: gives dark screen.
 
     }
 

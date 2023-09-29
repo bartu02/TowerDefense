@@ -8,8 +8,13 @@ public class GameOver : MonoBehaviour
 {
     public TextMeshProUGUI roundsText;
 
+    private void Start()
+    {
+        roundsText.text = PlayerStats.Rounds + "";
+    }
     public void Retry()
     {
+        //RestartGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
@@ -17,4 +22,10 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    /*private void RestartGame()
+    {
+        GameManager.GameIsOver = false;
+        Time.timeScale = 1;
+    }*/
 }

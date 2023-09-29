@@ -26,7 +26,6 @@ public class CompleteLevel : MonoBehaviour
             return;
         }
         string nextLevel = sceneFader.NextLevelToString(IntTypeLevel);
-
         sceneFader.FadeTo(nextLevel);
     }
 

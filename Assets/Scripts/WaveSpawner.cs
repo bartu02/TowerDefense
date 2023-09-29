@@ -32,12 +32,14 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        EnemiesAlive = 0;
+        PlayerStats.Rounds = 0;
         WaveNumberText.text = "Wave:1";
         LevelNumberText.text = "Level: " + SceneFader.LevelToInt();
     }
     void Update()
     {
-        if(EnemiesAlive > 0)
+        if (EnemiesAlive > 0)
         {
             return;
         }
@@ -52,10 +54,11 @@ public class WaveSpawner : MonoBehaviour
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
         waveCountdownText.text = string.Format("{0:00.00}", countdown);
-
     }
     IEnumerator SpawnWave()
     {
+
+        Debug.Log("SpawnWave started!");
         PlayerStats.Rounds++;
 
         waveIndex++;
