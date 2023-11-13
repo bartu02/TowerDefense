@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
 
-    public TextMeshProUGUI roundsText;
+    public TextMeshProUGUI [] roundsText;
     private void Start()
     {
         GameIsOver = false;
@@ -50,7 +50,10 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator AnimateText()
     {
-        roundsText.text = "0";
+        for(int i=0;i<roundsText.Length;i++)
+        {
+            roundsText[i].text = "0";
+        }
         int round = 0;
 
         yield return new WaitForSeconds(0.7f);
@@ -58,7 +61,11 @@ public class GameManager : MonoBehaviour
         while (round < PlayerStats.Rounds - 1)
         {
             round++;
-            roundsText.text = round.ToString();
+            for(int i=0;i<roundsText.Length;i++)
+            {
+                roundsText[i].text = round.ToString();
+            }
+            
 
             yield return new WaitForSeconds(0.05f);
         }
